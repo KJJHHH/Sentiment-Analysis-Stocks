@@ -20,3 +20,5 @@
     - Not finetuned to do financial tasks; some parameters (weights) cannot be downloaded successfully 
 ### Decide Scores
 ### Finetuning Pretrained Models
+## Reference
+1. [Sentiment for Chinese](https://arxiv.org/pdf/2306.14222.pdf)
