@@ -102,7 +102,7 @@ def text_concatenate_within_same_date(data):
 
 # merge text and price data
 def merge_prc_text(prc, data):
-    valid_time = prc.merge(data, on='time', how='left').\
+    valid_time = pd.merge(data, on='time', how='left').\
                             fillna(method = "ffill").\
                             dropna()["time"]
     prc_text = pd.merge(prc, data, on='time', how='left')
