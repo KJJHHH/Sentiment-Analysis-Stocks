@@ -132,6 +132,7 @@ def exp_moving(data, window_size):
             mv += math.copysign(1, k) * (k**((2)**past_k))
         data_mvexp.append(mv)
     return data_mvexp
+
 # --------------------
 
 

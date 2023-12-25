@@ -4,7 +4,6 @@ import yfinance as yf
 import pandas as pd
 import datetime
 from googletrans import Translator
-import math
 
 
 # check device usage
@@ -111,7 +110,6 @@ def merge_prc_text(prc, data):
     return prc_text
 
 # Function to calculate the moving average
-# --------------------
 def moving_average(data, window_size):
     cumsum = np.cumsum(data, dtype=float)
     cumsum[window_size:] = cumsum[window_size:] - cumsum[:-window_size]
@@ -132,9 +130,3 @@ def exp_moving(data, window_size):
             mv += math.copysign(1, k) * (k**((2)**past_k))
         data_mvexp.append(mv)
     return data_mvexp
-# --------------------
-
-
-
-
-
